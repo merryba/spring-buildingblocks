@@ -9,6 +9,6 @@ import com.api.merryba.Model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Long>{
-	public Optional<User> findByUsername(String username);
+	public User findByUsername(String username);
 
 }
