@@ -45,7 +45,7 @@ public class UserService {
 	}
 	
 	//find by username
-	public User getUserByUsername(String username)throws UserNotFoundException{
+	public User getUserByUsername(String username){
 		User user =userRepository.findByUsername(username);
 		
 		return user;
