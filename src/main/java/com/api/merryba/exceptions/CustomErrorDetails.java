@@ -2,38 +2,32 @@ package com.api.merryba.exceptions;
 
 import java.util.Date;
 
+//Simple custom error details bean
 public class CustomErrorDetails {
 	
+	private Date timestamp;
+	private String message;
+	private String errordetails;
 	
-	
-		public CustomErrorDetails(Date date, String message, String errordetails) {
+	//Fields Constructor
+	public CustomErrorDetails(Date timestamp, String message, String errordetails) {
 		super();
-		this.date = date;
+		this.timestamp = timestamp;
 		this.message = message;
 		this.errordetails = errordetails;
 	}
-		private Date date;
-		private String message;
-		private String errordetails;
-		public Date getDate() {
-			return date;
-		}
-		public void setDate(Date date) {
-			this.date = date;
-		}
-		public String getMessage() {
-			return message;
-		}
-		public void setMessage(String message) {
-			this.message = message;
-		}
-		public String getErrordetails() {
-			return errordetails;
-		}
-		public void setErrordetails(String errordetails) {
-			this.errordetails = errordetails;
-		}
-		
-		
+	
+	//GETTERS
+	public Date getTimestamp() {
+		return timestamp;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public String getErrordetails() {
+		return errordetails;
+	}
+	
+	
 
 }

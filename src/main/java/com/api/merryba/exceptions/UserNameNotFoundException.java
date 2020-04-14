@@ -1,16 +1,16 @@
 package com.api.merryba.exceptions;
 
-public class UserNameNotFoundException extends Exception{
+public class UserNameNotFoundException extends Exception {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1653167942999852736L;
+	private static final long serialVersionUID = 1L;
 
+	// Superclass Constructor
 	public UserNameNotFoundException(String message) {
 		super(message);
+		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }

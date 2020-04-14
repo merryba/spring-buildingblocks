@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 //@RestControllerAdvice
 public class GlobalRestControllerAdviceExceptionHandler {
+
 	@ExceptionHandler(UserNameNotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public CustomErrorDetails usernameNotFound(UserNameNotFoundException ex) {
-		return new CustomErrorDetails(new Date(),"From @RestControllerAdvice NOT FOUND",ex.getMessage());
+
+		return new CustomErrorDetails(new Date(), "From @RestControllerAdvice NOT FOUND", ex.getMessage());
 	}
+
 }
