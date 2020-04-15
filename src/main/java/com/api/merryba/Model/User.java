@@ -9,9 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+
 @Entity
 @Table(name="user")
-public class User {
+public class User extends RepresentationModel<User>{
 		@Id
 		@GeneratedValue
 		private long id;
@@ -125,9 +127,10 @@ public class User {
 		@Override
 		public String toString() {
 			return "User [id=" + id + ", username=" + username + ", firstname=" + firstname + ", lastname=" + lastname
-					+ ", email=" + email + ", role=" + role + ", ssn=" + ssn + "]";
+					+ ", email=" + email + ", role=" + role + ", ssn=" + ssn + ", orders=" + orders + "]";
 		}
-		
+
+				
 		
 		
 		

@@ -30,6 +30,7 @@ public class OrderController {
 	// Get All Orders of all users
 	@GetMapping("/orders")
 	public List<Order> getAllOrders() {
+		
 
 		return orderRepository.findAll();
 	}
