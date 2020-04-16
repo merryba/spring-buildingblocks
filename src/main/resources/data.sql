@@ -8,3 +8,4 @@ insert into orders values( 2003, 'order13', 101);
 insert into orders values( 2004, 'order21', 102);
 insert into orders values( 2005, 'order22', 102);
 insert into orders values( 2006, 'order31', 103);
+insert into employee values(104,100000,'Home',CURRENT_DATE(),CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP(),'Jessica');

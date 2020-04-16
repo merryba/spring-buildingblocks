@@ -11,37 +11,47 @@ import javax.persistence.Table;
 
 import org.springframework.hateoas.RepresentationModel;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
+import com.api.merryba.Model.Views.External;
+import com.fasterxml.jackson.annotation.JsonView;
 
 @Entity
 @Table(name="user")
 //@JsonIgnoreProperties({"firstname","lastname"}) -Static Filtering @JsonIgnore
-@JsonFilter(value="userFilter")
+//@JsonFilter(value="userFilter") - User for MappingJacksonvalue filtering section
 public class User extends RepresentationModel<User>{
 		@Id
 		@GeneratedValue
+		@JsonView(Views.External.class)
 		private long id;
 		
 		@Column(name="USER_NAME",length=50,nullable=false,unique=true)
+		@JsonView(Views.External.class)
 		private String username;
 		
 		@Column(name="FIRST_NAME",length=50,nullable=false)
+		@JsonView(Views.External.class)
 		private String firstname;
 		
 		@Column(name="LAST_NAME",length=50,nullable=false)
+		@JsonView(Views.External.class)
 		private String lastname;
 		
+		
 		@Column(name="EMAIL",length=50,nullable=false)
+		@JsonView(Views.External.class)
 		private String email;
 		
 		@Column(name="ROLE",length=50,nullable=false)
+		@JsonView(Views.Internal.class)
 		private String role;
 		
 		// @JsonIgnore - -Static Filtering @JsonIgnore
+		@JsonView(Views.Internal.class)
 		@Column(name="SSN",length=50,nullable=true,unique=true)
 		private String ssn;
 		
 		@OneToMany(mappedBy="user")
+		@JsonView(Views.Internal.class)
 		private List<Order> orders;
 
 		//No ARgs Constructor
