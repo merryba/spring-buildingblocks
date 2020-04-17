@@ -50,6 +50,9 @@ public class User extends RepresentationModel<User>{
 		@Column(name="SSN",length=50,nullable=true,unique=true)
 		private String ssn;
 		
+		@Column(name="ADDRESS")
+		private String address;
+		
 		@OneToMany(mappedBy="user")
 		@JsonView(Views.Internal.class)
 		private List<Order> orders;
@@ -60,9 +63,10 @@ public class User extends RepresentationModel<User>{
 			// TODO Auto-generated constructor stub
 		}
 
-		//Fields Constructor
-		public User(long id, String username, String firstname, String lastname, String email, String role,
-				String ssn) {
+		
+
+		public User(long id, String username, String firstname, String lastname, String email, String role, String ssn,
+				String address, List<Order> orders) {
 			super();
 			this.id = id;
 			this.username = username;
@@ -71,7 +75,11 @@ public class User extends RepresentationModel<User>{
 			this.email = email;
 			this.role = role;
 			this.ssn = ssn;
+			this.address = address;
+			this.orders = orders;
 		}
+
+
 
 		public long getId() {
 			return id;
@@ -139,11 +147,30 @@ public class User extends RepresentationModel<User>{
 			this.orders = orders;
 		}
 
+
+
+		public String getAddress() {
+			return address;
+		}
+
+
+
+		public void setAddress(String address) {
+			this.address = address;
+		}
+
+
+
 		@Override
 		public String toString() {
 			return "User [id=" + id + ", username=" + username + ", firstname=" + firstname + ", lastname=" + lastname
-					+ ", email=" + email + ", role=" + role + ", ssn=" + ssn + ", orders=" + orders + "]";
+					+ ", email=" + email + ", role=" + role + ", ssn=" + ssn + ", address=" + address + ", orders="
+					+ orders + "]";
 		}
+		
+		
+
+		
 
 				
 		

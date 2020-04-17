@@ -1,7 +1,7 @@
-insert into user values(101,'merryba@gmail.com','Meryba','Selva','admin','ssn101','merryba');
-insert into user values(102,'jselva@gmail.com','Selva','J','admin','ssn102','selva');
-insert into user values(103,'hayden@gmail.com','Hayden','Selva','admin','ssn103','hayden');
-insert into user values(104,'jessica@gmail.com','Jessica','Selva','admin','ssn104','Jessica');
+insert into user values(101,'New York','merryba@gmail.com','Meryba','Selva','admin','ssn101','merryba');
+insert into user values(102,'New Jersey','jselva@gmail.com','Selva','J','admin','ssn102','selva');
+insert into user values(103,'California','hayden@gmail.com','Hayden','Selva','admin','ssn103','hayden');
+insert into user values(104,'Dallas','jessica@gmail.com','Jessica','Selva','admin','ssn104','Jessica');
 insert into orders values( 2001, 'order11', 101);        
 insert into orders values( 2002, 'order12', 101);
 insert into orders values( 2003, 'order13', 101);
